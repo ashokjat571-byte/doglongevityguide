@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://doglongevityguide.netlify.app/sitemap.xml
