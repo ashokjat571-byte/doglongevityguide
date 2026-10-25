@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Longevity 101 &amp; the LOY Drug Tracker | DogLongevityGuide.com</title>
+<meta name="description" content="The science of dog longevity in plain English, plus the FDA tracker for LOY-001, LOY-002 and LOY-003.">
+<link rel="canonical" href="https://doglongevityguide.netlify.app/science.html">
+<style>
+      :root{
+        --bg:#FBF7F0;
+        --bg-soft:#F3EDE1;
+        --surface:#FFFFFF;
+        --surface-2:#F7F2E8;
+        --ink:#23281F;
+        --ink-soft:#4A5142;
+        --ink-faint:#6E7563;
+        --line:#E3DAC8;
+        --pine:#1E5631;
+        --pine-deep:#143D22;
+        --pine-soft:#E4EFE2;
+        --honey:#B96A12;
+        --honey-soft:#F8EAD3;
+        --rust:#A4442A;
+        --shadow:0 10px 30px rgba(35,40,31,.08);
+        --radius:14px;
+      }
+      @media (prefers-color-scheme: dark){
+        :root{
+          --bg:#141711;
+          --bg-soft:#1B1F17;
+          --surface:#1E231B;
+          --surface-2:#232820;
+          --ink:#EDEAE0;
+          --ink-soft:#C4C8B8;
+          --ink-faint:#99A08C;
+          --line:#333A2E;
+          --pine:#7FBF8E;
+          --pine-deep:#A5D8B0;
+          --pine-soft:#22301F;
+          --honey:#E0A458;
+          --honey-soft:#33291A;
+          --rust:#E08A6D;
+          --shadow:0 10px 30px rgba(0,0,0,.35);
+        }
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;background:var(--bg);color:var(--ink);
+        font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+        font-size:17px;line-height:1.6;
+        -webkit-font-smoothing:antialiased;
+      }
+      h1,h2,h3,.serif{font-family:"Newsreader",Georgia,"Times New Roman",serif}
+      img{max-width:100%;display:block}
+      a{color:var(--pine)}
+      .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+      section{scroll-margin-top:84px}
+
+      /* ---------- Nav ---------- */
+      .topnav{
+        position:sticky;top:0;z-index:50;
+        background:color-mix(in srgb, var(--bg) 92%, transparent);
+        backdrop-filter:blur(8px);
+        border-bottom:1px solid var(--line);
+      }
+      .topnav .wrap{display:flex;align-items:center;gap:22px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+      .brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.02rem;letter-spacing:-.01em}
+      .brand .paw{width:30px;height:30px;flex:none;border-radius:9px;background:var(--pine);display:grid;place-items:center}
+      .brand .paw svg{width:19px;height:19px;fill:#FFF7E8}
+      .brand small{display:block;font-weight:500;font-size:.68rem;color:var(--ink-faint);letter-spacing:.02em}
+      .navlinks{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+      .navlinks a{
+        text-decoration:none;color:var(--ink-soft);font-size:.9rem;font-weight:600;
+        padding:7px 11px;border-radius:8px;
+      }
+      .navlinks a:hover{background:var(--bg-soft);color:var(--ink)}
+      .navcta{
+        background:var(--pine);color:#FFF7E8 !important;
+      }
+      .navcta:hover{background:var(--pine-deep) !important;color:#FFF7E8 !important}
+      @media (prefers-color-scheme: dark){ .navcta{color:#12240F !important} }
+
+      /* ---------- Hero ---------- */
+      .hero{padding:52px 0 8px}
+      .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+      .hero h1{font-size:clamp(2.3rem,4.6vw,3.5rem);line-height:1.06;font-weight:600;letter-spacing:-.015em;margin:0 0 18px}
+      .hero h1 em{font-style:italic;color:var(--pine)}
+      .hero .lede{font-size:1.13rem;color:var(--ink-soft);margin:0 0 26px;max-width:34rem}
+      .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+      .btn{
+        display:inline-flex;align-items:center;gap:8px;
+        font-weight:700;font-size:.98rem;text-decoration:none;cursor:pointer;
+        padding:13px 22px;border-radius:11px;border:1.5px solid var(--pine);
+        background:var(--pine);color:#FFF7E8;transition:transform .12s ease, background .12s ease;
+      }
+      .btn:hover{background:var(--pine-deep)}
+      .btn.ghost{background:transparent;color:var(--pine)}
+      .btn.ghost:hover{background:var(--pine-soft)}
+      @media (prefers-color-scheme: dark){ .btn{color:#12240F} .btn.ghost{color:var(--pine)} }
+      .hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+      .hero-stats .stat b{display:block;font-family:"Newsreader",serif;font-size:1.55rem;font-weight:700;color:var(--pine);line-height:1.1}
+      .hero-stats .stat span{font-size:.82rem;color:var(--ink-faint);display:block;max-width:11.5rem;line-height:1.35}
+      .hero-photo{position:relative}
+      .hero-photo .media{position:relative}
+      .hero-photo .media img{border-radius:18px;box-shadow:var(--shadow);aspect-ratio:4/3.1;object-fit:cover;width:100%}
+      .hero-photo figcaption{
+        margin-top:10px;font-size:.82rem;color:var(--ink-faint);
+      }
+      .hero-photo .tag{
+        position:absolute;left:14px;bottom:14px;background:var(--surface);color:var(--ink);
+        border:1px solid var(--line);border-radius:10px;padding:8px 13px;font-size:.83rem;font-weight:600;
+        box-shadow:var(--shadow);max-width:78%;
+      }
+      .hero-photo .tag b{color:var(--pine)}
+      @media (max-width:860px){
+        .hero{padding-top:34px}
+        .hero-grid{grid-template-columns:1fr;gap:26px}
+      }
+
+      /* ---------- Section scaffolding ---------- */
+      .section{padding:58px 0 8px}
+      .sec-head{max-width:44rem;margin-bottom:28px}
+      .sec-head h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:0 0 10px}
+      .sec-head p{color:var(--ink-soft);margin:0}
+      .kicker{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--honey);margin:0 0 10px}
+
+      /* ---------- Start here ---------- */
+      .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+      .pillar{
+        background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+        padding:22px 20px;
+      }
+      .pillar .num{
+        font-family:"Newsreader",serif;font-size:1.9rem;font-weight:700;color:var(--honey);line-height:1;
+        display:block;margin-bottom:10px;
+      }
+      .pillar h3{font-size:1.16rem;margin:0 0 8px;font-weight:600}
+      .pillar p{font-size:.92rem;color:var(--ink-soft);margin:0}
+      @media (max-width:980px){ .pillars{grid-template-columns:repeat(2,1fr)} }
+      @media (max-width:560px){ .pillars{grid-template-columns:1fr} }
+
+      /* ---------- LOY tracker ---------- */
+      .tracker-band{background:var(--pine-deep);border-radius:20px;padding:34px 34px 28px;color:#EAF3E4}
+      @media (prefers-color-scheme: dark){ .tracker-band{background:#1D2B1A;border:1px solid var(--line)} }
+      .tracker-band .kicker{color:#E5B26B}
+      .tracker-band h2{color:#FBF7EC;margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600}
+      .tracker-band .sub{color:#C9DCC0;max-width:46rem;margin:0 0 26px}
+      .drug-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      .drug{
+        background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+        border-radius:var(--radius);padding:22px 20px;color:#EAF3E4;
+      }
+      @media (prefers-color-scheme: dark){ .drug{background:var(--surface-2)} }
+      .drug .dname{font-family:"Newsreader",serif;font-size:1.7rem;font-weight:700;color:#fff;line-height:1}
+      @media (prefers-color-scheme: dark){ .drug .dname{color:var(--ink)} }
+      .drug .who{font-size:.85rem;color:#BFD6B4;font-weight:700;margin:6px 0 12px}
+      .drug p{font-size:.92rem;color:#D8E6CF;margin:0 0 14px}
+      @media (prefers-color-scheme: dark){ .drug p{color:var(--ink-soft)} .drug .who{color:var(--pine)} }
+      .badge{
+        display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+        padding:4px 10px;border-radius:999px;background:#E5B26B;color:#3A2708;
+      }
+      .badge.done{background:#9CCB8E;color:#17300F}
+      .drug ul{margin:14px 0 0;padding:0;list-style:none;font-size:.86rem;color:#C9DCC0}
+      @media (prefers-color-scheme: dark){ .drug ul{color:var(--ink-soft)} }
+      .drug ul li{padding:5px 0;border-top:1px dashed rgba(255,255,255,.16);display:flex;justify-content:space-between;gap:10px}
+      .drug ul li b{color:#fff;font-weight:600;text-align:right}
+      @media (prefers-color-scheme: dark){ .drug ul li b{color:var(--ink)} }
+      .timeline{margin-top:28px;border-top:1px solid rgba(255,255,255,.18);padding-top:22px}
+      .timeline h3{color:#FBF7EC;margin:0 0 16px;font-size:1.15rem;font-weight:600}
+      .tl-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+      .tl-item{font-size:.85rem;color:#C9DCC0}
+      .tl-item b{display:block;color:#fff;font-family:"Newsreader",serif;font-size:1.02rem;margin-bottom:3px}
+      .tl-item .dot{display:block;width:11px;height:11px;border-radius:50%;background:#E5B26B;margin-bottom:9px}
+      .tl-item.next .dot{background:transparent;border:2px solid #E5B26B}
+      .tracker-note{
+        margin-top:24px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.14);
+        border-radius:12px;padding:16px 18px;font-size:.92rem;color:#E4EDDA;
+      }
+      .tracker-note b{color:#fff}
+      .tracker-src{margin-top:14px;font-size:.8rem;color:#A9C29C}
+      .tracker-src a{color:#D9E8CE}
+      @media (max-width:980px){ .drug-grid{grid-template-columns:1fr} .tl-row{grid-template-columns:repeat(2,1fr)} }
+      @media (max-width:560px){ .tracker-band{padding:26px 20px} .tl-row{grid-template-columns:1fr} }
+    </style><style>
+@keyframes dlgb{0%,49%{opacity:1}50%,100%{opacity:.1}}
+.dlg-blink{animation:dlgb 1s infinite}
+.dlg-btn{display:inline-block;background:#c81e5b;color:#fff!important;padding:12px 30px;border-radius:999px;text-decoration:none;font-size:17px;font-weight:bold;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+</style><style>
+      /* ---------- Guides ---------- */
+      .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+      .guide-card{
+        background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+        overflow:hidden;display:flex;flex-direction:column;text-align:left;cursor:pointer;
+        font:inherit;color:inherit;padding:0;transition:transform .14s ease, box-shadow .14s ease;
+      }
+      .guide-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+      .guide-card img{width:100%;aspect-ratio:16/9.5;object-fit:cover}
+      .guide-card .gc-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+      .guide-card .cat{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--honey)}
+      .guide-card h3{font-size:1.22rem;line-height:1.25;margin:0;font-weight:600}
+      .guide-card p{font-size:.9rem;color:var(--ink-soft);margin:0;flex:1}
+      .guide-card .meta{font-size:.8rem;color:var(--ink-faint);font-weight:600}
+      .guide-card .meta b{color:var(--pine)}
+      @media (max-width:980px){ .guide-grid{grid-template-columns:repeat(2,1fr)} }
+      @media (max-width:620px){ .guide-grid{grid-template-columns:1fr} }
+      .roadmap{
+        margin-top:18px;background:var(--surface-2);border:1px dashed var(--line-strong, var(--line));
+        border-radius:var(--radius);padding:20px 22px;
+      }
+      .roadmap h3{margin:0 0 8px;font-size:1.1rem}
+      .roadmap p{margin:0 0 10px;font-size:.92rem;color:var(--ink-soft)}
+      .roadmap ul{margin:0;padding-left:18px;font-size:.92rem;color:var(--ink-soft);columns:2;column-gap:34px}
+      @media (max-width:620px){ .roadmap ul{columns:1} }
+
+      /* ---------- Reader ---------- */
+      #reader{display:none;padding:54px 0 10px}
+      #reader.open{display:block}
+      .reader-inner{max-width:46rem;margin:0 auto}
+      .back-btn{
+        background:none;border:none;font:inherit;font-weight:700;color:var(--pine);cursor:pointer;
+        padding:6px 0;font-size:.95rem;
+      }
+      .back-btn:hover{text-decoration:underline}
+      #reader .cat{font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--honey);margin:14px 0 6px}
+      #reader h2{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.12;font-weight:600;margin:0 0 10px}
+      #reader .rmeta{font-size:.86rem;color:var(--ink-faint);font-weight:600;margin-bottom:20px}
+      #reader .rimg{border-radius:14px;width:100%;aspect-ratio:16/8.6;object-fit:cover;margin-bottom:24px}
+      #reader-body{font-size:1.05rem;color:var(--ink)}
+      #reader-body p{margin:0 0 16px}
+      #reader-body h3{font-size:1.35rem;margin:28px 0 8px;font-weight:600}
+      #reader-body ul{margin:0 0 16px;padding-left:20px}
+      #reader-body li{margin-bottom:7px}
+      #reader-body .callout{
+        background:var(--pine-soft);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:.97rem;
+      }
+      #reader-body .callout b{color:var(--pine-deep)}
+      #reader-body .src{font-size:.85rem;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px;margin-top:26px}
+
+      /* ---------- Breed explorer ---------- */
+      .breed-tool{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+      .breed-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+      .breed-controls input[type="search"]{
+        flex:1;min-width:200px;font:inherit;font-size:.98rem;padding:12px 15px;border-radius:10px;
+        border:1.5px solid var(--line);background:var(--bg);color:var(--ink);
+      }
+      .breed-controls select{
+        font:inherit;font-size:.95rem;padding:12px;border-radius:10px;border:1.5px solid var(--line);
+        background:var(--bg);color:var(--ink);
+      }
+      .size-chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px}
+      .chip{
+        font:inherit;font-size:.86rem;font-weight:700;padding:7px 14px;border-radius:999px;cursor:pointer;
+        border:1.5px solid var(--line);background:var(--bg);color:var(--ink-soft);
+      }
+      .chip[aria-pressed="true"]{background:var(--pine);border-color:var(--pine);color:#FFF7E8}
+      @media (prefers-color-scheme: dark){ .chip[aria-pressed="true"]{color:#12240F} }
+      .breed-scale{display:flex;justify-content:space-between;font-size:.72rem;color:var(--ink-faint);font-weight:700;margin:14px 0 4px;padding-left:0}
+      .breed-row{
+        display:grid;grid-template-columns:220px 1fr 108px;gap:16px;align-items:center;
+        padding:13px 0;border-top:1px solid var(--line);
+      }
+      .breed-row .bname{font-weight:700;font-size:1rem;line-height:1.3}
+      .breed-row .bname span{display:block;font-weight:500;font-size:.8rem;color:var(--ink-faint)}
+      .breed-row .bnote{grid-column:1 / -1;font-size:.86rem;color:var(--ink-soft);margin-top:-6px}
+      .bar-track{position:relative;height:16px;background:var(--bg-soft);border-radius:999px}
+      .bar-fill{
+        position:absolute;top:0;height:100%;border-radius:999px;background:var(--pine);
+        min-width:14px;
+      }
+      .bar-fill.giant{background:var(--rust)}
+      .bar-fill.large{background:var(--honey)}
+      .breed-row .byears{font-family:"Newsreader",serif;font-weight:700;font-size:1.12rem;text-align:right;color:var(--ink)}
+      .breed-row .byears span{display:block;font-family:"Public Sans",sans-serif;font-size:.7rem;font-weight:600;color:var(--ink-faint)}
+      .breed-empty{padding:22px 0;font-size:.95rem;color:var(--ink-soft);display:none}
+      .breed-foot{font-size:.83rem;color:var(--ink-faint);margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+      @media (max-width:680px){
+        .breed-tool{padding:20px 16px}
+        .breed-row{grid-template-columns:1fr 92px;grid-template-rows:auto auto}
+        .breed-row .bar-track{grid-column:1 / -1;order:3}
+        .breed-row .bnote{order:4}
+        .breed-row .byears{order:2}
+      }
+
+      /* ---------- Checklist ---------- */
+      .checklist-band{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+      .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 34px;margin-top:6px}
+      .check-group h3{font-size:1.18rem;margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:9px}
+      .check-group h3 .freq{
+        font-family:"Public Sans",sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+        background:var(--honey-soft);color:var(--honey);padding:3px 9px;border-radius:999px;
+      }
+      .check-group ul{list-style:none;margin:0;padding:0}
+      .check-group li{
+        position:relative;padding:7px 0 7px 30px;font-size:.95rem;color:var(--ink-soft);
+        border-bottom:1px dashed var(--line);
+      }
+      .check-group li:last-child{border-bottom:none}
+      .check-group li::before{
+        content:"";position:absolute;left:2px;top:12px;width:15px;height:15px;border-radius:5px;
+        border:2px solid var(--pine);opacity:.75;
+      }
+      .check-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;align-items:center}
+      .check-actions .note{font-size:.85rem;color:var(--ink-faint)}
+      @media (max-width:760px){ .check-grid{grid-template-columns:1fr} .checklist-band{padding:24px 20px} }
+
+      /* ---------- Product lab ---------- */
+      .lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+      .lab-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
+      .lab-card h3{font-size:1.25rem;margin:0 0 4px;font-weight:600}
+      .lab-card .verdict{
+        display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+        background:var(--pine-soft);color:var(--pine-deep);padding:4px 10px;border-radius:999px;margin:6px 0 12px;
+      }
+      .lab-card h4{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--honey);margin:16px 0 5px;font-family:"Public Sans",sans-serif}
+      .lab-card p{font-size:.92rem;color:var(--ink-soft);margin:0}
+      .lab-card ul{margin:0;padding-left:17px;font-size:.92rem;color:var(--ink-soft)}
+      .lab-card li{margin-bottom:4px}
+      @media (max-width:980px){ .lab-grid{grid-template-columns:1fr} }
+      .disclosure{font-size:.83rem;color:var(--ink-faint);margin-top:16px}
+
+      /* ---------- About / footer ---------- */
+      .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px}
+      .about-grid h3{font-size:1.3rem;margin:0 0 10px;font-weight:600}
+      .about-grid p{color:var(--ink-soft);margin:0 0 14px;font-size:.98rem}
+      .rules{list-style:none;margin:0;padding:0}
+      .rules li{padding:9px 0 9px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem;color:var(--ink-soft)}
+      .rules li:last-child{border-bottom:none}
+      .rules li::before{
+        content:"";position:absolute;left:3px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--honey);
+      }
+      .rules li b{color:var(--ink)}
+      .disclaimer{
+        background:var(--honey-soft);border-radius:12px;padding:18px 20px;font-size:.92rem;color:var(--ink);
+        margin-top:26px;
+      }
+      .disclaimer b{color:var(--honey)}
+      @media (max-width:820px){ .about-grid{grid-template-columns:1fr} }
+      footer{margin-top:64px;border-top:1px solid var(--line);background:var(--bg-soft)}
+      footer .wrap{padding-top:30px;padding-bottom:34px;display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+      footer .fbrand{font-weight:800}
+      footer .fbrand span{display:block;font-weight:500;font-size:.85rem;color:var(--ink-faint);margin-top:3px;max-width:26rem}
+      footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
+      footer .flinks a{font-size:.88rem;font-weight:600;text-decoration:none;color:var(--ink-soft)}
+      footer .flinks a:hover{color:var(--ink)}
+      footer .fine{width:100%;font-size:.78rem;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px}
+    </style><style>body{font-family:Georgia,serif;max-width:720px;margin:36px auto;padding:0 22px;color:#23281F;line-height:1.55}" +
+        "h1{font-size:26px;margin-bottom:2px}h2{font-size:18px;margin:26px 0 6px;color:#1E5631}" +
+        "ul{list-style:none;padding:0}li{padding:6px 0 6px 28px;position:relative;border-bottom:1px dashed #ccc}" +
+        "li::before{content:'';position:absolute;left:2px;top:11px;width:13px;height:13px;border:2px solid #1E5631;border-radius:4px}" +
+        ".sub{color:#666;font-size:14px}.foot{margin-top:30px;font-size:12.5px;color:#777;border-top:1px solid #ddd;padding-top:12px}</style>
+<style>.dlg-nav{display:flex;gap:16px;flex-wrap:wrap;background:#24402f;padding:10px 20px;font-family:Georgia,serif}.dlg-nav a{color:#fff;text-decoration:none;font-size:14.5px}.dlg-nav a:hover{color:#ffd98a;text-decoration:underline}@keyframes dlgb{0%,49%{opacity:1}50%,100%{opacity:.1}}.dlg-blink{animation:dlgb 1s infinite}.dlg-btn{display:inline-block;background:#c81e5b;color:#fff;padding:9px 22px;border-radius:999px;text-decoration:none;font-weight:bold}.chip[aria-pressed="true"]{background:#1d3b2a;color:#fff}</style>
+</head>
+<body>
+<div class="dlg-topbar" style="position:sticky;top:0;z-index:9999;background:#1d3b2a;color:#fff;text-align:center;padding:10px 12px;font-family:Georgia,serif;font-size:16px">
+The Senior Dog Longevity Plan — 12-Week Workbook &nbsp;<a class="dlg-btn dlg-blink" href="https://doglongevityguide.gumroad.com/l/senior-dog-longevity-plan" style="padding:7px 20px;font-size:15px">Get the Workbook — $11</a>
+</div>
+<header><a href="/">DogLongevityGuide.com</a><span>More good years, together.</span></header>
+<nav class="dlg-nav"><a href="/">Home</a><a href="/science.html">Science &amp; Tracker</a><a href="/breeds.html">Breed Database</a><a href="/checklist.html">Checklist</a><a href="/lab.html">Product Lab</a><a href="/about.html">About</a><a href="/guides/">All Guides</a></nav>
+<main>
+<section class="section" id="start-here">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">Start Here &middot; Longevity 101</p>
+            <h2>Four things the research keeps coming back to</h2>
+            <p>No miracle products. These are the levers with real evidence behind them &mdash; the foundation everything else on this site builds on.</p>
+          </div>
+          <div class="pillars">
+            <div class="pillar">
+              <span class="num">1</span>
+              <h3>Keep them lean</h3>
+              <p>The single strongest lifespan finding in dog science: in Purina&rsquo;s 14-year study of 48 Labradors, dogs kept lean lived a median of <strong>1.8 years longer</strong> and stayed healthier. You should be able to feel ribs under a thin fat layer.</p>
+            </div>
+            <div class="pillar">
+              <span class="num">2</span>
+              <h3>Move every day</h3>
+              <p>Muscle is a senior dog&rsquo;s savings account. Daily walks, gentle hills and short play sessions protect joints, weight and brain. Little and often beats one long weekend hike &mdash; especially after age 10.</p>
+            </div>
+            <div class="pillar">
+              <span class="num">3</span>
+              <h3>Test, don&rsquo;t guess</h3>
+              <p>From age 7&ndash;8, twice-yearly vet visits with bloodwork catch kidney, liver and thyroid trouble while it&rsquo;s still cheap and treatable. Trends matter more than any single result &mdash; keep the reports.</p>
+            </div>
+            <div class="pillar">
+              <span class="num">4</span>
+              <h3>Protect teeth, joints &amp; brain</h3>
+              <p>Dental disease seeds bacteria into the heart and kidneys. Joint pain quietly shrinks a dog&rsquo;s world. And cognitive decline has early signs most owners miss. All three are manageable &mdash; if you start early.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ LOY TRACKER ============ -->
+      <section class="section" id="tracker">
+        <div class="wrap">
+          <div class="tracker-band">
+            <p class="kicker">News Tracker &middot; Updated October 23, 2026</p>
+            <h2>The dog longevity drugs: LOY-001, LOY-002 &amp; LOY-003</h2>
+            <p class="sub">A San Francisco company called <strong>Loyal</strong> is developing the first drugs intended to extend lifespan itself &mdash; not treat a disease. Here is where each one actually stands with the FDA, in plain English.</p>
+
+            <div class="drug-grid">
+              <div class="drug">
+                <div class="dname">LOY-002</div>
+                <div class="who">FOR: SENIOR DOGS, 10+ YEARS, 14+ LB</div>
+                <p>A daily, beef-flavored pill that targets the metabolic changes of aging &mdash; designed to mimic some benefits of calorie restriction without feeding less. The lead program, and the one closest to market.</p>
+                <span class="badge">Closest to launch</span>
+                <ul>
+                  <li><span>Effectiveness (RXE)</span><b>Accepted Feb 2025</b></li>
+                  <li><span>Safety (TAS)</span><b>Accepted Jan 2026</b></li>
+                  <li><span>Manufacturing</span><b>In progress</b></li>
+                  <li><span>Possible availability</span><b>Late 2026–2027 (conditional)</b></li>
+                </ul>
+              </div>
+              <div class="drug">
+                <div class="dname">LOY-001</div>
+                <div class="who">FOR: LARGE &amp; GIANT DOGS, 7+ YEARS, 40+ LB</div>
+                <p>An injectable that lowers IGF-1, the growth hormone linked to why big dogs age faster and die younger. If it works, it targets the breeds with the shortest lives &mdash; Great Danes, Bernese, Rottweilers.</p>
+                <span class="badge done">FDA milestone reached</span>
+                <ul>
+                  <li><span>Effectiveness (RXE)</span><b>Accepted 2023</b></li>
+                  <li><span>Form</span><b>Vet-administered injection</b></li>
+                  <li><span>Status</span><b>In development</b></li>
+                </ul>
+              </div>
+              <div class="drug">
+                <div class="dname">LOY-003</div>
+                <div class="who">FOR: LARGE &amp; GIANT DOGS, 5+ YEARS, 60+ LB</div>
+                <p>A daily pill version of the same IGF-1 approach as LOY-001 &mdash; same goal (slow the faster aging of big dogs), easier format for owners who prefer a tablet at home over injections at the clinic.</p>
+                <span class="badge done">FDA milestone reached</span>
+                <ul>
+                  <li><span>Effectiveness (RXE)</span><b>Accepted Sept 2026</b></li>
+                  <li><span>Form</span><b>Daily pill</b></li>
+                  <li><span>Status</span><b>In development</b></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <h3>How we got here</h3>
+              <div class="tl-row">
+                <div class="tl-item"><span class="dot"></span><b>2023</b>FDA accepts LOY-001&rsquo;s reasonable expectation of effectiveness &mdash; a first for a lifespan-extension claim.</div>
+                <div class="tl-item"><span class="dot"></span><b>Feb 2025</b>LOY-002 clears the same effectiveness milestone for senior dogs of nearly all sizes.</div>
+                <div class="tl-item"><span class="dot"></span><b>Jul 2025</b>STAY study finishes enrolling: 1,300+ dogs at 70 US vet practices &mdash; the largest trial in veterinary medicine.</div>
+                <div class="tl-item"><span class="dot"></span><b>Jan 2026</b>FDA accepts LOY-002&rsquo;s safety package, including data from 400+ dogs and doses up to 5&times; the intended strength.</div>
+                <div class="tl-item next"><span class="dot"></span><b>Late 2026 &rarr; 2027</b>Final manufacturing (CMC) section still in progress. Conditional approval could follow &mdash; full lifespan proof comes from STAY data over time.</div>
+              </div>
+            </div>
+
+            <div class="tracker-note">
+              <b>Read this before you get excited:</b> &ldquo;Reasonable expectation of effectiveness&rdquo; is not proof. No LOY drug is approved or on sale yet, and no completed trial has yet shown these drugs add years. Conditional approval, if it comes, means the FDA judges the drug safe and <em>likely</em> effective while long-term data is gathered. We track it because it&rsquo;s historic &mdash; and we&rsquo;ll say so plainly if the data disappoints.
+            </div>
+            <p class="tracker-src">Sources: <a href="https://www.veterinarypracticenews.com/100m-raised-to-advance-canine-longevity-drug-toward-fda-review/" target="_blank" rel="noopener">Veterinary Practice News (Feb 2026)</a> &middot; <a href="https://pulse2.com/loyal-100-million-series-c-raised-to-advance-first-canine-longevity-drug/" target="_blank" rel="noopener">Pulse 2.0</a> &middot; <a href="https://longevity.technology/news/loyal-raises-100m-as-canine-longevity-drug-nears-approval/" target="_blank" rel="noopener">Longevity.Technology</a> &middot; <a href="https://www.consumeraffairs.com/news/a-pill-to-help-dogs-live-longer-moves-closer-to-fda-approval-102126.html" target="_blank" rel="noopener">ConsumerAffairs (Oct 2026)</a> &middot; Loyal company announcements.</p>
+          </div>
+        </div>
+      </section>
+
+    <style>
+      /* ---------- Guides ---------- */
+      .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+      .guide-card{
+        background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+        overflow:hidden;display:flex;flex-direction:column;text-align:left;cursor:pointer;
+        font:inherit;color:inherit;padding:0;transition:transform .14s ease, box-shadow .14s ease;
+      }
+      .guide-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+      .guide-card img{width:100%;aspect-ratio:16/9.5;object-fit:cover}
+      .guide-card .gc-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+      .guide-card .cat{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--honey)}
+      .guide-card h3{font-size:1.22rem;line-height:1.25;margin:0;font-weight:600}
+      .guide-card p{font-size:.9rem;color:var(--ink-soft);margin:0;flex:1}
+      .guide-card .meta{font-size:.8rem;color:var(--ink-faint);font-weight:600}
+      .guide-card .meta b{color:var(--pine)}
+      @media (max-width:980px){ .guide-grid{grid-template-columns:repeat(2,1fr)} }
+      @media (max-width:620px){ .guide-grid{grid-template-columns:1fr} }
+      .roadmap{
+        margin-top:18px;background:var(--surface-2);border:1px dashed var(--line-strong, var(--line));
+        border-radius:var(--radius);padding:20px 22px;
+      }
+      .roadmap h3{margin:0 0 8px;font-size:1.1rem}
+      .roadmap p{margin:0 0 10px;font-size:.92rem;color:var(--ink-soft)}
+      .roadmap ul{margin:0;padding-left:18px;font-size:.92rem;color:var(--ink-soft);columns:2;column-gap:34px}
+      @media (max-width:620px){ .roadmap ul{columns:1} }
+
+      /* ---------- Reader ---------- */
+      #reader{display:none;padding:54px 0 10px}
+      #reader.open{display:block}
+      .reader-inner{max-width:46rem;margin:0 auto}
+      .back-btn{
+        background:none;border:none;font:inherit;font-weight:700;color:var(--pine);cursor:pointer;
+        padding:6px 0;font-size:.95rem;
+      }
+      .back-btn:hover{text-decoration:underline}
+      #reader .cat{font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--honey);margin:14px 0 6px}
+      #reader h2{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.12;font-weight:600;margin:0 0 10px}
+      #reader .rmeta{font-size:.86rem;color:var(--ink-faint);font-weight:600;margin-bottom:20px}
+      #reader .rimg{border-radius:14px;width:100%;aspect-ratio:16/8.6;object-fit:cover;margin-bottom:24px}
+      #reader-body{font-size:1.05rem;color:var(--ink)}
+      #reader-body p{margin:0 0 16px}
+      #reader-body h3{font-size:1.35rem;margin:28px 0 8px;font-weight:600}
+      #reader-body ul{margin:0 0 16px;padding-left:20px}
+      #reader-body li{margin-bottom:7px}
+      #reader-body .callout{
+        background:var(--pine-soft);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:.97rem;
+      }
+      #reader-body .callout b{color:var(--pine-deep)}
+      #reader-body .src{font-size:.85rem;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px;margin-top:26px}
+
+      /* ---------- Breed explorer ---------- */
+      .breed-tool{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+      .breed-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+      .breed-controls input[type="search"]{
+        flex:1;min-width:200px;font:inherit;font-size:.98rem;padding:12px 15px;border-radius:10px;
+        border:1.5px solid var(--line);background:var(--bg);color:var(--ink);
+      }
+      .breed-controls select{
+        font:inherit;font-size:.95rem;padding:12px;border-radius:10px;border:1.5px solid var(--line);
+        background:var(--bg);color:var(--ink);
+      }
+      .size-chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px}
+      .chip{
+        font:inherit;font-size:.86rem;font-weight:700;padding:7px 14px;border-radius:999px;cursor:pointer;
+        border:1.5px solid var(--line);background:var(--bg);color:var(--ink-soft);
+      }
+      .chip[aria-pressed="true"]{background:var(--pine);border-color:var(--pine);color:#FFF7E8}
+      @media (prefers-color-scheme: dark){ .chip[aria-pressed="true"]{color:#12240F} }
+      .breed-scale{display:flex;justify-content:space-between;font-size:.72rem;color:var(--ink-faint);font-weight:700;margin:14px 0 4px;padding-left:0}
+      .breed-row{
+        display:grid;grid-template-columns:220px 1fr 108px;gap:16px;align-items:center;
+        padding:13px 0;border-top:1px solid var(--line);
+      }
+      .breed-row .bname{font-weight:700;font-size:1rem;line-height:1.3}
+      .breed-row .bname span{display:block;font-weight:500;font-size:.8rem;color:var(--ink-faint)}
+      .breed-row .bnote{grid-column:1 / -1;font-size:.86rem;color:var(--ink-soft);margin-top:-6px}
+      .bar-track{position:relative;height:16px;background:var(--bg-soft);border-radius:999px}
+      .bar-fill{
+        position:absolute;top:0;height:100%;border-radius:999px;background:var(--pine);
+        min-width:14px;
+      }
+      .bar-fill.giant{background:var(--rust)}
+      .bar-fill.large{background:var(--honey)}
+      .breed-row .byears{font-family:"Newsreader",serif;font-weight:700;font-size:1.12rem;text-align:right;color:var(--ink)}
+      .breed-row .byears span{display:block;font-family:"Public Sans",sans-serif;font-size:.7rem;font-weight:600;color:var(--ink-faint)}
+      .breed-empty{padding:22px 0;font-size:.95rem;color:var(--ink-soft);display:none}
+      .breed-foot{font-size:.83rem;color:var(--ink-faint);margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+      @media (max-width:680px){
+        .breed-tool{padding:20px 16px}
+        .breed-row{grid-template-columns:1fr 92px;grid-template-rows:auto auto}
+        .breed-row .bar-track{grid-column:1 / -1;order:3}
+        .breed-row .bnote{order:4}
+        .breed-row .byears{order:2}
+      }
+
+      /* ---------- Checklist ---------- */
+      .checklist-band{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+      .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 34px;margin-top:6px}
+      .check-group h3{font-size:1.18rem;margin:0 0 10px;font-weight:600;display:flex;align-items:center;gap:9px}
+      .check-group h3 .freq{
+        font-family:"Public Sans",sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+        background:var(--honey-soft);color:var(--honey);padding:3px 9px;border-radius:999px;
+      }
+      .check-group ul{list-style:none;margin:0;padding:0}
+      .check-group li{
+        position:relative;padding:7px 0 7px 30px;font-size:.95rem;color:var(--ink-soft);
+        border-bottom:1px dashed var(--line);
+      }
+      .check-group li:last-child{border-bottom:none}
+      .check-group li::before{
+        content:"";position:absolute;left:2px;top:12px;width:15px;height:15px;border-radius:5px;
+        border:2px solid var(--pine);opacity:.75;
+      }
+      .check-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;align-items:center}
+      .check-actions .note{font-size:.85rem;color:var(--ink-faint)}
+      @media (max-width:760px){ .check-grid{grid-template-columns:1fr} .checklist-band{padding:24px 20px} }
+
+      /* ---------- Product lab ---------- */
+      .lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+      .lab-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px}
+      .lab-card h3{font-size:1.25rem;margin:0 0 4px;font-weight:600}
+      .lab-card .verdict{
+        display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+        background:var(--pine-soft);color:var(--pine-deep);padding:4px 10px;border-radius:999px;margin:6px 0 12px;
+      }
+      .lab-card h4{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--honey);margin:16px 0 5px;font-family:"Public Sans",sans-serif}
+      .lab-card p{font-size:.92rem;color:var(--ink-soft);margin:0}
+      .lab-card ul{margin:0;padding-left:17px;font-size:.92rem;color:var(--ink-soft)}
+      .lab-card li{margin-bottom:4px}
+      @media (max-width:980px){ .lab-grid{grid-template-columns:1fr} }
+      .disclosure{font-size:.83rem;color:var(--ink-faint);margin-top:16px}
+
+      /* ---------- About / footer ---------- */
+      .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px}
+      .about-grid h3{font-size:1.3rem;margin:0 0 10px;font-weight:600}
+      .about-grid p{color:var(--ink-soft);margin:0 0 14px;font-size:.98rem}
+      .rules{list-style:none;margin:0;padding:0}
+      .rules li{padding:9px 0 9px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem;color:var(--ink-soft)}
+      .rules li:last-child{border-bottom:none}
+      .rules li::before{
+        content:"";position:absolute;left:3px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--honey);
+      }
+      .rules li b{color:var(--ink)}
+      .disclaimer{
+        background:var(--honey-soft);border-radius:12px;padding:18px 20px;font-size:.92rem;color:var(--ink);
+        margin-top:26px;
+      }
+      .disclaimer b{color:var(--honey)}
+      @media (max-width:820px){ .about-grid{grid-template-columns:1fr} }
+      footer{margin-top:64px;border-top:1px solid var(--line);background:var(--bg-soft)}
+      footer .wrap{padding-top:30px;padding-bottom:34px;display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+      footer .fbrand{font-weight:800}
+      footer .fbrand span{display:block;font-weight:500;font-size:.85rem;color:var(--ink-faint);margin-top:3px;max-width:26rem}
+      footer .flinks{display:flex;gap:16px;flex-wrap:wrap}
+      footer .flinks a{font-size:.88rem;font-weight:600;text-decoration:none;color:var(--ink-soft)}
+      footer .flinks a:hover{color:var(--ink)}
+      footer .fine{width:100%;font-size:.78rem;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px}
+    </style>
+
+    <!-- ============ GUIDES ============ -->
+    
+<div class="dlg-mid" style="background:#ffd98a;color:#1d3b2a;padding:24px 20px;text-align:center;font-family:Georgia,serif">
+<div style="font-size:20px;font-weight:bold;margin-bottom:12px">Reading the research? Get the complete 12-week system behind it.</div>
+<a class="dlg-btn dlg-blink" href="https://doglongevityguide.gumroad.com/l/senior-dog-longevity-plan">Get the Workbook — $11</a>
+</div>
+
+</main>
+<footer><div class="wrap"><div class="fbrand">DogLongevityGuide.com<span>The science of longer, healthier lives for dogs — explained in plain English. More good years, together.</span></div>
+<nav class="dlg-nav"><a href="/">Home</a><a href="/science.html">Science &amp; Tracker</a><a href="/breeds.html">Breed Database</a><a href="/checklist.html">Checklist</a><a href="/lab.html">Product Lab</a><a href="/about.html">About</a><a href="/guides/">All Guides</a></nav>
+<p class="fine">General information, not veterinary advice. Always confirm diet, medication and screening plans with your own veterinarian. &copy; 2026 DogLongevityGuide.com</p>
+<p><a href="https://doglongevityguide.gumroad.com/l/senior-dog-longevity-plan">Get the Workbook — $11</a></p></div></footer>
+
+</body></html>
